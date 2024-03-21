@@ -40,6 +40,7 @@ class TestTextNode(unittest.TestCase):
     def test_inner_test_class(self):
         suiteEq = unittest.defaultTestLoader.loadTestsFromTestCase(self.Eq)
         suiteRepr = unittest.defaultTestLoader.loadTestsFromTestCase(self.Repr)
+        
         unittest.TextTestRunner().run(suiteEq)
         unittest.TextTestRunner().run(suiteRepr)
 
