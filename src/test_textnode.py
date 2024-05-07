@@ -51,7 +51,7 @@ class TestTextNode(unittest.TestCase):
             node = TextNode("tere tere", text_type_text)
             self.assertEqual(text_node_to_html_node(
                 node).to_html(), LeafNode(None, "tere tere").to_html())
-
+            
     def test_inner_test_class(self):
         suiteEq = unittest.defaultTestLoader.loadTestsFromTestCase(self.Eq)
         suiteRepr = unittest.defaultTestLoader.loadTestsFromTestCase(self.Repr)
