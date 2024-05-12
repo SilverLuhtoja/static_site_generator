@@ -1,8 +1,15 @@
 import os
 import shutil
 
+from generator import generate_page
+
 dir_path_static = "./static"
 dir_path_public = "./public"
+
+
+from_path = "./content/index.md"
+template_path = "template.html"
+dest_path =  "./public/index.html"
 
 def recurse_copy(source_path, to_path):
     if not os.path.exists(to_path):
@@ -23,4 +30,6 @@ def main():
         shutil.rmtree(dir_path_public)
         
     recurse_copy(dir_path_static, dir_path_public)
+    
+    generate_page(from_path, template_path, dest_path)
 main()
